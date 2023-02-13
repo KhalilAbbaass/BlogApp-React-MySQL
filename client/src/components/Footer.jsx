@@ -1,8 +1,16 @@
-import React from 'react'
+import React from 'react';
+import blogLogo from '../Assets/bloggapp.png';
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+   <footer>
+
+    <img alt='' src={blogLogo}></img>
+    <span>
+      Made with ❤ <b>React.js</b>
+    </span>
+
+   </footer>
   )
 }
 
