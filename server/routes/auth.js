@@ -3,8 +3,8 @@ const { register, login, logout } = require("../controllers/auth");
 const router = require("express").Router();
 
 router.post("/register" , register)
-router.post("/register" , login)
-router.post("/register" , logout)
+router.post("/login" , login)
+router.post("/logout" , logout)
 
 
 module.exports = router;
