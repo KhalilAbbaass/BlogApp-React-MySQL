@@ -9,14 +9,15 @@ export const AuthContextProvider = ({children}) => {
     const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem('user')) || null)
 
     const login = async (inputs) => {
-        loginUser(inputs).then((result) => {
+        await loginUser(inputs).then((result) => {
             setCurrentUser(result.data)
         })
 
     }
     const logout = async () => {
-       logoutUser().then(() => {
+       await logoutUser().then((result) => {
         setCurrentUser(null);
+        console.log(result.data)
        })
         
     }
