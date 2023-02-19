@@ -12,6 +12,7 @@ Register form and its validation
 ![Validations](https://user-images.githubusercontent.com/103119609/219963445-05ecf52b-2293-4697-8269-a2da9649ebc6.png)
 
 Login Form
+
 ![Login Form](https://user-images.githubusercontent.com/103119609/219963552-cfce9453-c0cf-4db9-9a30-2d5d8eaefada.png)
 
 Home Page after login (navbar changes with logout functionality) using Context api and JWT
