@@ -18,7 +18,12 @@ const Home = () => {
       })
     };
     fetchData();
-  } ,[cat])
+  } ,[cat]);
+
+  const getText = (html) => {
+    const doc = new DOMParser().parseFromString(html, "text/html")
+    return doc.body.textContent;
+  }
 
   
   return (
@@ -30,15 +35,19 @@ const Home = () => {
           {posts.map((item) => (
             <div className='post' key={item.id}>
                 <div className='img'>
-                    <img alt='' src={item.img}/>
+                    <img alt='' src={`./upload/${item.img}`}/>
 
                 </div>
                 <div className='content'>
                     <Link className='link' to={`/post/${item.id}`}>
                       <h1>{item.title}</h1>
                     </Link>
-                    <p>{item.desc}</p>
-                    <button>Read More</button>
+                    <p>{getText(item.desc)}</p>
+                    <button>
+                      <Link className='link' to={`/post/${item.id}`}>
+                        Read More
+                      </Link>
+                    </button>
                 </div>
               </div>
           ))}
